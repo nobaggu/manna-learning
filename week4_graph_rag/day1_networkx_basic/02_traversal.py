@@ -144,3 +144,4 @@ print("-" * 60)
 for mentor, score, role_m, trait_n, topic_n in scores:
     name = G.nodes[mentor].get("name", mentor)
     print(f"{mentor} ({name})  {score:.3f}    {'✓' if role_m else '✗'}          {trait_n}          {topic_n}")
+    
