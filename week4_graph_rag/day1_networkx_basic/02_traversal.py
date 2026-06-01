@@ -1,6 +1,14 @@
 """그래프 탐색 — 멘토 매칭의 기본 동작"""
 
+import sys
 import networkx as nx
+
+# 윈도우 터미널(cp949) 한글/특수문자 깨짐 방지
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 # === 더 큰 그래프 — 멘토 3명 ===
 G = nx.MultiDiGraph()
